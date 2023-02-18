@@ -17,7 +17,7 @@ public class http {
     }
 
     // returns API response -- uses custom model, so it's easy to access each attribute
-    private static Object gptAPI(String prompt)  {
+    private static Root gptAPI(String prompt)  {
         StringBuilder response = new StringBuilder();
         Root responseData = ResponseParser.parseJSON(String.valueOf(response));
 
