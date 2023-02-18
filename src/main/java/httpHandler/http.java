@@ -50,8 +50,8 @@ public class http {
             String jsonString = (
                     "{\"model\":\"code-cushman-001\"," +            // model to use -- 'code-davinci-002' or 'code-cushman-001' for code completion
                             "\"prompt\":\"" + prompt + "\"," +
-                            "\"max_tokens\":2000," +                // max working value 3888 (code-davinci-002) || 2000 (code-cushman-001)
-                            "\"temperature\":0.2," +                // lower == more deterministic || higher == more random -- 0.2 seems to be the sweet spot
+                            "\"max_tokens\":1900," +                // max working value 3888 (code-davinci-002) || 2000 (code-cushman-001) -- however max can cause response failure
+                            "\"temperature\":0.4," +                // lower == more deterministic || higher == more random -- 0.2-0.4 seems to be the sweet spot
                             "\"top_p\":1," +
                             "\"n\":1," +                            // completions to create -- leave at 1
                             "\"stream\":false," +
