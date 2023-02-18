@@ -1,3 +1,5 @@
+// response model root
+
 package model.code_completion;
 
 import java.util.ArrayList;
@@ -10,3 +12,4 @@ public class Root{
     public ArrayList<Choice> choices;
     public Usage usage;
 }
+
