@@ -24,7 +24,7 @@ public class http {
         connection.setRequestProperty("Content-Type", "application/json");
         connection.setRequestProperty("Accept", "application/json");
 
-        connection.setRequestProperty("Authorization","Bearer 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");
+        connection.setRequestProperty("Authorization","Bearer <API_KEY_HERE>");
 
         // connect ensure
         connection.setDoOutput(true);
