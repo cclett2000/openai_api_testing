@@ -19,7 +19,7 @@ public class http {
     // returns API response -- uses custom model, so it's easy to access each attribute
     private static Root gptAPI(String prompt)  {
         StringBuilder response = new StringBuilder();
-        Root responseData = ResponseParser.parseJSON(String.valueOf(response));
+        Root responseData = null;
 
         try {
             // set endpoint and open connection
@@ -74,8 +74,10 @@ public class http {
                 //System.out.println("[HTTP-RESPONSE] >> " + response);
             }
 
-            // parse raw json string and store easily accessible data structure
             System.out.println("[RESPONSE-TEST-PROMPT] >> " + prompt);
+
+            // parse raw json string and store easily accessible data structure
+            responseData = ResponseParser.parseJSON(String.valueOf(response));
 
             // leave arrayList element at 0 || get text is the generated response from the API
             System.out.println("[RESPONSE-TEST-PROMPT-ANSWER] >> " + responseData.choices.get(0).getText());
